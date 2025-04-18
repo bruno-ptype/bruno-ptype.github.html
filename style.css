@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+img {
+    display: block;          
+    margin: 0 auto;         
+    max-width: 80%;        
+    border-radius: 8px;   
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f9f9f9;
+    background-image: url(img/art.jpg);
+    color: #E7E9E7;
+    line-height: 1.6;
+    background-size: cover;
+    padding: 20px;
+    max-width: 1000px;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    background-color: rgb(39, 39, 42);
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #E7E9E7;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 1800px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+ul li img {
+    border: 3px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+ul li img:hover {
+    transform: scale(1.05);
+    border-color: #f39c12;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgb(39, 39, 42);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #E7E9E7;
+    color: rgb(39, 39, 42);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #f39c12;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 30px;
+}
+.photo {
+    margin: 20px 0;
+    padding: 10px;
+    background:rgb(39,39, 42);
+    border-radius: 5px;
+    }
+.photo {
+        margin: 20px 0;
+        padding: 10px;
+        background:rgb(39,39, 42);
+        border-radius: 5px;
+        }
