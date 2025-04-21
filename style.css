@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
+
 img {
     display: block;          
     margin: 0 auto;         
@@ -20,7 +21,6 @@ body {
     background-size: cover;
     padding: 20px;
     max-width: 1000px;
-    background-size: cover;
     background-attachment: fixed;
     margin: 0 auto;
 }
@@ -28,12 +28,14 @@ body {
 h1, h2 {
     font-family: 'Playfair Display', serif;
     letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #E7E9E7;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+p {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 nav {
@@ -62,18 +64,6 @@ nav ul li a:hover {
     color: #f39c12;
 }
 
-h1, h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #E7E9E7;
-}
-
-p {
-    text-align: center;
-    margin-bottom: 20px;
-    max-width: 1800px;
-}
-
 ul {
     display: flex;
     flex-wrap: wrap;
@@ -86,7 +76,6 @@ ul li img {
     border: 3px solid #ddd;
     border-radius: 8px;
     transition: transform 0.3s;
-    text-align: center;
 }
 
 ul li img:hover {
@@ -133,15 +122,10 @@ input[type="submit"]:hover {
     text-align: center;
     margin-top: 30px;
 }
+
 .photo {
     margin: 20px 0;
     padding: 10px;
-    background:rgb(39,39, 42);
+    background: rgb(39, 39, 42);
     border-radius: 5px;
-    }
-.photo {
-        margin: 20px 0;
-        padding: 10px;
-        background:rgb(39,39, 42);
-        border-radius: 5px;
-        }
+}
