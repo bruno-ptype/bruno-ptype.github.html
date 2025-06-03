@@ -1,95 +1,132 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+*{
+    color:var(--color-texto) !important;
 }
 
-img {
-    display: block;          
-    margin: 0 auto;         
-    max-width: 80%;        
-    border-radius: 8px;   
+/*parametros de colores para proyecto*/
+
+
+:root{
+    --color-primario: #b8b08d;
+    --color-secundario: #283845;
+    --color-nav: #202c39;
+    --color-terciario: #f29559;
+    --color-texto: #ffffff;
 }
+
+/*parametros para body*/
 
 body {
-    font-family: 'Quicksand', sans-serif;
-    background-color: #f9f9f9;
-    background-image: url(img/art.jpg);
-    color: #E7E9E7;
-    line-height: 1.6;
+    font-family: sans-serif;
+    background-color:var(--color-primario);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
     background-size: cover;
-    padding: 20px;
-    max-width: 1000px;
-    background-attachment: fixed;
-    margin: 0 auto;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    margin-bottom: 40px;
+    
 }
 
-h1, h2 {
-    font-family: 'Playfair Display', serif;
-    letter-spacing: 1px;
+/*parametros para titulo y subtitulo*/
+
+h1, h2, h3{
+
+    color:var(--color-texto);
     text-align: center;
+    letter-spacing: 1px;
     margin-bottom: 20px;
-    color: #E7E9E7;
+    
+
 }
+
+/* parametros para parrafo*/
 
 p {
-    text-align: center;
+    color:var(--color-texto);
+    line-height: 1.5;
     margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
 }
 
-nav {
-    background-color: rgb(39, 39, 42);
-    padding: 15px 0;
-    margin-bottom: 30px;
-}
+/* parametros para barra de busqueda*/
 
-nav ul {
+nav ul{
+    color: var(--color-nav);
     display: flex;
     justify-content: center;
     list-style: none;
 }
+
+/* parametros de colores para proyecto*/
 
 nav ul li {
     margin: 0 15px;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
+/* parametros para clase: photo (sección)*/
 
-nav ul li a:hover {
-    color: #f39c12;
-}
-
-ul {
-    display: flex;
-    flex-wrap: wrap;
+.photo {
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
     justify-content: center;
-    list-style: none;
-    gap: 20px;
+    align-items: center;
 }
 
-ul li img {
-    border: 3px solid #ddd;
-    border-radius: 8px;
-    transition: transform 0.3s;
+/*parametros para imagen de clase*/
+
+.photo img {
+    max-width: 100%;
+    margin: 20px auto;
+    height: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
 }
 
-ul li img:hover {
-    transform: scale(1.05);
-    border-color: #f39c12;
+/*parametros para transición de NavBar*/
+
+.navbar-inverse{
+
+    background-color:var(--color-nav);
+    border-color: var(--color-nav);
+
 }
+.navbar-nav > li > a {
+    font-size: 16px; 
+    transition: font-size 0.3s ease-in-out; 
+}
+
+.navbar-nav > li > a:hover {
+    font-size: 20px; 
+}
+
+
+/*parametros para form (desde form hasta input type = "submit")*/
+
+.container-form {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+
 
 form {
-    max-width: 600px;
+
+    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
-    background: rgb(39, 39, 42);
+    background: var(--color-secundario);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px var(--color-nav);
+    max-height: 650px;
+
 }
 
 label {
@@ -98,34 +135,139 @@ label {
     font-weight: bold;
 }
 
+.img-thumbnail {
+    transition: transform 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.img-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+
 input, select, textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-nav);
     border-radius: 4px;
+    max-width: 100%;
+    color: var(--color-nav);
+    background-color: var(--color-secundario);
 }
 
+.form-control {
+    color: var(--color-nav); /* Texto oscuro */
+    background-color: var(--color-nav); /* Fondo oscuro */
+    border: 1px solid var(--color-terciario);
+}
+
+
 input[type="submit"] {
-    background-color: #E7E9E7;
-    color: rgb(39, 39, 42);
+    background-color:var(--color-secundario);
+    max-width: 100%;
+    color: var(--color-terciario);
     border: none;
     cursor: pointer;
     font-size: 16px;
 }
 
 input[type="submit"]:hover {
-    background-color: #f39c12;
+    background-color: var(--color-terciario);
 }
 
-.contact-info {
-    text-align: center;
-    margin-top: 30px;
+/*parametros para clase gallery (y su respectiva transición)*/
+
+.gallery{
+
+    padding: 20px;
+    box-shadow: 80%;
+    background-color: var(--color-terciario);
+}
+ul li img {
+    border: 3px solid var(--color-texto);
+    border-radius: 8px;
+    transition: transform 0.3s;
 }
 
-.photo {
-    margin: 20px 0;
-    padding: 10px;
-    background: rgb(39, 39, 42);
+ul li img:hover {
+    transform: scale(1.05);
+    border-color: var(--color-terciario);
+}
+
+select {
+    background-color: var(--color-texto);
+    border: 2px solid var(--color-secundario);
     border-radius: 5px;
+    padding: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  select:hover {
+    background-color: var(--color-terciario);
+    transform: scale(1.05);
+  }
+  option {
+    font-size: 16px;
+    padding: 8px;
+  }
+  select:focus {
+    background-color: var(--color-terciario);
+  }
+
+/* Estilos para el modal 
+
+/* Estilos generales para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del contenido del modal */
+.modal-content {
+    background: var(--color-secundario);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--color-nav);
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Botón para cerrar el modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--color-terciario);
+}
+
+.close:hover {
+    color: var(--color-terciario);
+}
+
+.eliminar-btn {
+  width: 60px; /* Ajusta el ancho del botón */
+  height: 60px; /* Ajusta la altura del botón */
+  border-radius: 50%; /* Hace que el botón sea circular */
+  background-color: var(--color-nav); /* Cambia el color de fondo */
+  color: white; /* Cambia el color del texto */
+  text-align: center; /* Asegura que el texto esté alineado */
+  padding: 10px; /* Espaciado interno */
+  display: flex; /* Usa flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  font-size: 14px; /* Ajusta el tamaño de la fuente si es necesario */
 }

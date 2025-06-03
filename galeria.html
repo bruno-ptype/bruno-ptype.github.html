@@ -1,43 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Galería de Arte - Obras</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <title>Bansky Art</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <!-- Menú principal (igual que en index.html) -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="galeria.html">Galería</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Bansky Art</a> <!-- Nombre de la marca en el Navbar -->
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li><a href="./galeria.html">Galería de Arte</a></li>
+                <li><a href="./contacto.html">Contáctanos</a></li>
+            </ul>
+        </div>
     </nav>
+
+    <!-- Intro Galería -->
     <div>
-        <h1>Fotografias de nuestra galería de arte</h1>
-            <p>La cultura juega un rol fundamental en la vida de las personas. Es por esto que consideramos indispensable llevarla a cada rincón que sea posible.</p>
-            <p>Dentro de este segmento encontrarás fotografias de las obras presentadas en diferentes exposiciones y eventos culturales realizados por nosotros.</p>
+        <h1 class="gallery">Fotografías de nuestra galería de arte</h1>
+        <p>La cultura juega un rol fundamental en la vida de las personas. Es por esto que consideramos indispensable llevarla a cada rincón que sea posible.</p>
+        <p>Dentro de este segmento encontrarás fotografías de las obras presentadas en diferentes exposiciones y eventos culturales realizados por nosotros.</p>
     </div>    
-    <!-- Galería de imágenes -->
-     <br>
-     <br>
-     <hr>
-     <br>
-     <br>
-    <h2>Nuestra galería de arte</h2>
-    <div class="photo">
-    <ul>
-        <li><img src="./img/galeria/cuadro1.jpg" alt="obra1" width="1000"></li>
-        <li><H3>Fotografía número 1</H3></li>
-        <li><img src="./img/galeria/cuadro2.jpg" alt="obra2" width="1000"></li>
-        <li><H3>Fotografía número 2</H3></li>
-        <li><img src="./img/galeria/cuadro3.jpg" alt="obra3" width="1000"></li>
-        <li><H3>Fotografía número 3</H3></li>
-        <li><img src="./img/galeria/cuadro4.jpg" alt="obra4" width="1000"></li>
-        <li><H3>Fotografía número 4</H3></li>
-    </ul>
+
+    <!-- Galería de fotos-->
+    <div class="container mt-5 pt-4">
+        <h1 class="text-center">Nuestras obras</h1>
+        <div class="row g-4">
+
+            <!-- Imagenes y su boton de eliminar -->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <button class="eliminar-btn">Eliminar</button>
+                <img src="img/img2.jpg" class="img-thumbnail" alt="Pintura 1" data-nombre="La inmensitud del universo - Alvaro Vasquez">
+                <h3 class="text-center">Autor: Alvaro V.</h3>
+                
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <button class="eliminar-btn">Eliminar</button>
+                <img src="img/img3.jpg" class="img-thumbnail" alt="Pintura 2" data-nombre="La inmaculada soledad - Alvaro Vasquez">
+                <h3 class="text-center">Autor: Alvaro V.</h3>
+                
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <button class="eliminar-btn">Eliminar</button>
+                <img src="img/img4.jpg" class="img-thumbnail" alt="Pintura 4" data-nombre="El soliloquio adventista - Alvaro Vasquez">
+                <h3 class="text-center">Autor: Alvaro V.</h3>
+                
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <button class="eliminar-btn">Eliminar</button>
+                <img src="img/img5.jpg" class="img-thumbnail" alt="Pintura 5" data-nombre="Los inverbes - Alvaro Vasquez">
+                <h3 class="text-center">Autor: Alvaro V.</h3>
+                
+            </div>
+
+        </div>
     </div>
+
+    <!-- Modal  -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span> <!-- Botón para cerrar el modal -->
+            <div id="modal-contenido"></div> <!-- Espacio donde se mostrará el nombre de la obra -->
+        </div>
+    </div>
+
+    <!-- Bootstrap y script JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" 
+        crossorigin="anonymous"></script>
+    <script src="js/galeria.js"></script>
+
 </body>
 </html>
